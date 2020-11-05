@@ -1,0 +1,71 @@
+{
+  "name": "artsflow",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "prettier --check \"**/*.{ts,tsx}\" && eslint \"**/*.{ts,tsx}\"",
+    "format": "prettier --write \"**/*.{js,ts,tsx}\" && eslint --fix \"**/*.{js,ts,tsx}\"",
+    "type-check": "tsc --pretty --noEmit",
+    "reset": "cd ios && rm -rf Pods && pod cache clean --all && pod install && cd ..",
+    "reinstall": "rm -rf node_modules yarn.lock && yarn"
+  },
+  "dependencies": {
+    "@svgr/core": "^5.4.0",
+    "path-dirname": "^1.0.2",
+    "react": "17.0.1",
+    "react-native": "0.63.3",
+    "react-native-svg": "^12.1.0",
+    "semver": "^7.3.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn run type-check"
+    }
+  },
+  "lint-staged": {
+    "*.@(ts|tsx)": [
+      "yarn lint",
+      "yarn format"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/runtime": "^7.12.5",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "@svgr/plugin-svgo": "^5.4.0",
+    "@types/jest": "^26.0.15",
+    "@types/react-native": "^0.63.32",
+    "@types/react-test-renderer": "^16.9.3",
+    "@typescript-eslint/eslint-plugin": "^4.6.1",
+    "@typescript-eslint/parser": "^4.6.1",
+    "babel-jest": "^26.6.3",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "eslint": "^7.12.1",
+    "husky": "^4.3.0",
+    "jest": "^26.6.3",
+    "lint-staged": "^10.5.1",
+    "metro-react-native-babel-preset": "^0.63.0",
+    "react-native-svg-transformer": "^0.14.3",
+    "react-test-renderer": "17.0.1",
+    "ts-jest": "^26.4.3",
+    "typescript": "^4.0.5"
+  },
+  "jest": {
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
+}
