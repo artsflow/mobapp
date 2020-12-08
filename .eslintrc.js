@@ -19,6 +19,7 @@ module.exports = {
     'react/no-children-prop': 0,
     'react/require-default-props': 0,
     'react/no-unescaped-entities': 'off',
+    '@typescript-eslint/no-explicit-any': ['warn'],
     '@typescript-eslint/no-var-requires': 0,
     '@typescript-eslint/ban-ts-comment': 'off',
     '@typescript-eslint/explicit-function-return-type': 0,
