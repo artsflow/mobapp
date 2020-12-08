@@ -5,6 +5,8 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
+    "ios5": "react-native run-ios --simulator=\"iPhone 5\"",
+    "adb": "adb -s 0A031JEC211126 reverse tcp:8081 tcp:8081",
     "start": "react-native start",
     "test": "jest",
     "test:watch": "jest --watch",

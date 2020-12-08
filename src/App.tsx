@@ -3,11 +3,12 @@ import * as React from 'react'
 import { ThemeProvider } from 'react-native-magnus'
 import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { SafeAreaProvider } from 'react-native-safe-area-context'
+import { SafeAreaProvider, useSafeAreaInsets } from 'react-native-safe-area-context'
 import { Icon } from 'react-native-magnus'
 
 import { ExploreScreen, SavedScreen, MessagesScreen, ProfileScreen } from 'screens'
 
+const TAB_HEIGHT = 75
 const Tab = createBottomTabNavigator()
 
 const App = () => {
@@ -15,32 +16,38 @@ const App = () => {
     <ThemeProvider>
       <SafeAreaProvider>
         <NavigationContainer>
-          <Tab.Navigator
-            screenOptions={handleScreenOptions}
-            tabBarOptions={{
-              activeTintColor: 'black',
-              inactiveTintColor: 'gray',
-              labelStyle: {
-                marginBottom: 10,
-              },
-              tabStyle: {
-                height: 55,
-              },
-              style: {
-                backgroundColor: '#F0F0F0',
-                borderTopLeftRadius: 10,
-                borderTopRightRadius: 10,
-              },
-            }}
-          >
-            <Tab.Screen name="Explore" component={ExploreScreen} />
-            <Tab.Screen name="Saved" component={SavedScreen} />
-            <Tab.Screen name="Messages" component={MessagesScreen} />
-            <Tab.Screen name="Profile" component={ProfileScreen} />
-          </Tab.Navigator>
+          <TabNavigator />
         </NavigationContainer>
       </SafeAreaProvider>
     </ThemeProvider>
+  )
+}
+
+const TabNavigator = () => {
+  const insets = useSafeAreaInsets()
+  return (
+    <Tab.Navigator
+      screenOptions={handleScreenOptions}
+      tabBarOptions={{
+        activeTintColor: 'black',
+        inactiveTintColor: 'gray',
+        labelStyle: {},
+        tabStyle: {
+          paddingVertical: 15,
+        },
+        style: {
+          backgroundColor: '#F0F0F0',
+          borderTopLeftRadius: 10,
+          borderTopRightRadius: 10,
+          height: TAB_HEIGHT + insets.bottom,
+        },
+      }}
+    >
+      <Tab.Screen name="Explore" component={ExploreScreen} />
+      <Tab.Screen name="Saved" component={SavedScreen} />
+      <Tab.Screen name="Messages" component={MessagesScreen} />
+      <Tab.Screen name="Profile" component={ProfileScreen} />
+    </Tab.Navigator>
   )
 }
 
@@ -72,7 +79,7 @@ const handleScreenOptions = ({ route }: any) => ({
         break
     }
 
-    return <Icon name={name} fontFamily={fontFamily} color={color} fontSize="xl" />
+    return <Icon name={name} fontFamily={fontFamily} color={color} fontSize={24} />
   },
 })
 
