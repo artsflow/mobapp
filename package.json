@@ -12,14 +12,17 @@
     "lint": "prettier --check \"**/*.{ts,tsx}\" && eslint \"**/*.{ts,tsx}\"",
     "format": "prettier --write \"**/*.{js,ts,tsx}\" && eslint --fix \"**/*.{js,ts,tsx}\"",
     "type-check": "tsc --pretty --noEmit",
+    "ch": "yarn lint && yarn type-check",
     "reset": "cd ios && rm -rf Pods && pod cache clean --all && pod install && cd ..",
     "reinstall": "rm -rf node_modules yarn.lock && yarn"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",
+    "@react-navigation/bottom-tabs": "^5.11.2",
     "@react-navigation/native": "^5.8.10",
     "@react-navigation/stack": "^5.12.8",
     "@svgr/core": "^5.4.0",
+    "@types/react-native-vector-icons": "^6.4.6",
     "appcenter": "^3.1.2",
     "appcenter-analytics": "^3.1.2",
     "appcenter-crashes": "^3.1.2",
