@@ -1,14 +1,14 @@
 import * as React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 
-const ExploreStack = createStackNavigator()
+const ActivitiesStack = createStackNavigator()
 const SavedStack = createStackNavigator()
 const MessagesStack = createStackNavigator()
 const ProfileStack = createStackNavigator()
 
 import {
-  ExploreScreen,
-  ArtActivityScreen,
+  ActivitiesScreen,
+  ActivityScreen,
   ArtistProfileScreen,
   SavedScreen,
   MessagesScreen,
@@ -22,13 +22,17 @@ const screenOptions = {
   },
 }
 
-export function ExploreStackScreen() {
+export function ActivitiesStackScreen() {
   return (
-    <ExploreStack.Navigator screenOptions={screenOptions}>
-      <ExploreStack.Screen name="Explore" component={ExploreScreen} />
-      <ExploreStack.Screen name="ArtActivity" component={ArtActivityScreen} />
-      <ExploreStack.Screen name="ArtistProfile" component={ArtistProfileScreen} />
-    </ExploreStack.Navigator>
+    <ActivitiesStack.Navigator screenOptions={screenOptions}>
+      <ActivitiesStack.Screen name="Activities" component={ActivitiesScreen} />
+      <ActivitiesStack.Screen name="Activity" component={ActivityScreen} />
+      <ActivitiesStack.Screen
+        name="ArtistProfile"
+        options={{ title: 'Artist Profile' }}
+        component={ArtistProfileScreen}
+      />
+    </ActivitiesStack.Navigator>
   )
 }
 

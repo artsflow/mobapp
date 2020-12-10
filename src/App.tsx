@@ -8,7 +8,7 @@ import { Icon } from 'react-native-magnus'
 import { SWRConfig } from 'swr'
 
 import {
-  ExploreStackScreen,
+  ActivitiesStackScreen,
   SavedStackScreen,
   MessagesStackScreen,
   ProfileStackScreen,
@@ -59,7 +59,7 @@ const TabNavigator = () => {
         },
       }}
     >
-      <Tab.Screen name="Explore" component={ExploreStackScreen} />
+      <Tab.Screen name="Activities" component={ActivitiesStackScreen} />
       <Tab.Screen name="Saved" component={SavedStackScreen} />
       <Tab.Screen name="Messages" component={MessagesStackScreen} />
       <Tab.Screen name="Profile" component={ProfileStackScreen} />
@@ -73,7 +73,7 @@ const handleScreenOptions = ({ route }: any) => ({
     let fontFamily: any
 
     switch (route.name) {
-      case 'Explore':
+      case 'Activities':
         name = 'explore'
         fontFamily = 'MaterialIcons'
 

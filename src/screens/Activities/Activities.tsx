@@ -2,22 +2,26 @@ import * as React from 'react'
 import { Text, Div, Avatar, Icon, Image } from 'react-native-magnus'
 import { FlatList, Dimensions, TouchableWithoutFeedback } from 'react-native'
 import Swiper from 'react-native-swiper'
+import { useNavigation } from '@react-navigation/native'
 
 import { Container } from 'components'
-import { useExplore } from 'services/art-sessions'
+import { useActivitiesList } from 'services/activities'
 
 export const { width } = Dimensions.get('window')
 
 const Item = (item: any) => {
   const { category, title, description, price, images } = item
+  const navigation = useNavigation()
   const height = (width - 40) / 1.5
 
   const handleDetailsPress = () => {
-    console.log('handleDetailsPress', item)
+    console.log('handleDetailsPress')
+    navigation.navigate('Activity', { item })
   }
 
   const handleUserPress = () => {
     console.log('handleUserPress')
+    navigation.navigate('ArtistProfile', { item })
   }
 
   return (
@@ -71,8 +75,8 @@ const Item = (item: any) => {
   )
 }
 
-export function ExploreScreen() {
-  const { data } = useExplore()
+export function ActivitiesScreen() {
+  const { data } = useActivitiesList()
   // console.log(loading, error, data)
 
   const renderItem = ({ item }: any) => <Item {...item} />

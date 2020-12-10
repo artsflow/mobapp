@@ -1,9 +1,9 @@
 import { gql } from 'graphql-request'
 import useSWR from 'swr'
 
-const EXPLORE_ART_ACTIVITIES = gql`
+const EXPLORE_ACTIVITIES = gql`
   query {
-    explore {
+    exploreActivities {
       id
       category
       title
@@ -21,7 +21,7 @@ const EXPLORE_ART_ACTIVITIES = gql`
   }
 `
 
-export function useExplore() {
-  const { data, error, isValidating } = useSWR(EXPLORE_ART_ACTIVITIES)
-  return { data: data?.explore, error, loading: isValidating }
+export function useActivitiesList() {
+  const { data, error, isValidating } = useSWR(EXPLORE_ACTIVITIES)
+  return { data: data?.exploreActivities, error, loading: isValidating }
 }
