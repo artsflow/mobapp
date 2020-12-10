@@ -8,6 +8,7 @@ const EXPLORE_ART_ACTIVITIES = gql`
       category
       title
       description
+      images
       address {
         freeformAddress
       }
