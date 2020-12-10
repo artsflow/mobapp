@@ -7,7 +7,12 @@ import { SafeAreaProvider, useSafeAreaInsets } from 'react-native-safe-area-cont
 import { Icon } from 'react-native-magnus'
 import { SWRConfig } from 'swr'
 
-import { ExploreScreen, SavedScreen, MessagesScreen, ProfileScreen } from 'screens'
+import {
+  ExploreStackScreen,
+  SavedStackScreen,
+  MessagesStackScreen,
+  ProfileStackScreen,
+} from './Stacks'
 import { client } from 'services/client'
 
 export const fetcher = (query: string) => client.request(query)
@@ -54,10 +59,10 @@ const TabNavigator = () => {
         },
       }}
     >
-      <Tab.Screen name="Explore" component={ExploreScreen} />
-      <Tab.Screen name="Saved" component={SavedScreen} />
-      <Tab.Screen name="Messages" component={MessagesScreen} />
-      <Tab.Screen name="Profile" component={ProfileScreen} />
+      <Tab.Screen name="Explore" component={ExploreStackScreen} />
+      <Tab.Screen name="Saved" component={SavedStackScreen} />
+      <Tab.Screen name="Messages" component={MessagesStackScreen} />
+      <Tab.Screen name="Profile" component={ProfileStackScreen} />
     </Tab.Navigator>
   )
 }

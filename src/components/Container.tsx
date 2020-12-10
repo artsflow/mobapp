@@ -1,6 +1,5 @@
 import * as React from 'react'
-import { StatusBar } from 'react-native'
-import { SafeAreaView } from 'react-native-safe-area-context'
+import { StatusBar, SafeAreaView } from 'react-native'
 import { Div } from 'react-native-magnus'
 
 export function Container({ children, ...rest }: any) {
@@ -8,7 +7,6 @@ export function Container({ children, ...rest }: any) {
     <SafeAreaView
       style={{
         flex: 1,
-        justifyContent: 'flex-start',
         backgroundColor: 'white',
       }}
     >
