@@ -5,8 +5,12 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { SafeAreaProvider, useSafeAreaInsets } from 'react-native-safe-area-context'
 import { Icon } from 'react-native-magnus'
+import { SWRConfig } from 'swr'
 
 import { ExploreScreen, SavedScreen, MessagesScreen, ProfileScreen } from 'screens'
+import { client } from 'services/client'
+
+export const fetcher = (query: string) => client.request(query)
 
 const TAB_HEIGHT = 75
 const Tab = createBottomTabNavigator()
@@ -14,11 +18,18 @@ const Tab = createBottomTabNavigator()
 const App = () => {
   return (
     <ThemeProvider>
-      <SafeAreaProvider>
-        <NavigationContainer>
-          <TabNavigator />
-        </NavigationContainer>
-      </SafeAreaProvider>
+      <SWRConfig
+        value={{
+          revalidateOnFocus: false,
+          fetcher,
+        }}
+      >
+        <SafeAreaProvider>
+          <NavigationContainer>
+            <TabNavigator />
+          </NavigationContainer>
+        </SafeAreaProvider>
+      </SWRConfig>
     </ThemeProvider>
   )
 }

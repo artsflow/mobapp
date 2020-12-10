@@ -18,8 +18,10 @@ module.exports = {
         ],
         alias: {
           components: './src/components',
+          services: ['./src/services'],
           screens: './src/screens',
           utils: './src/utils',
+          lib: ['./src/lib'],
         },
       },
     ],
