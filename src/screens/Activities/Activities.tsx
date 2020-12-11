@@ -7,12 +7,9 @@ import { useNavigation } from '@react-navigation/native'
 import { Container } from 'components'
 import { useActivitiesList } from 'services/activities'
 
-export const { width } = Dimensions.get('window')
-
 const Item = (item: any) => {
   const { category, title, description, price, images } = item
   const navigation = useNavigation()
-  const height = (width - 40) / 1.5
 
   const handleDetailsPress = () => {
     console.log('handleDetailsPress')
@@ -26,27 +23,8 @@ const Item = (item: any) => {
 
   return (
     <Div mx={20} mb={50}>
-      <Div h={height} borderColor="#E6E6E6" borderWidth={1} rounded={8}>
-        <Swiper dotColor="grey" activeDotColor="white" loop={false}>
-          {images &&
-            images.map((img: string) => (
-              <Image
-                key={img}
-                h={height}
-                rounded={8}
-                source={{
-                  uri: `https://ik.imagekit.io/artsflow/tr:w-${width},h-${height},fo-auto/${img}`,
-                }}
-              />
-            ))}
-        </Swiper>
-      </Div>
-      <Div alignItems="flex-start" my={16}>
-        <Text bg="rgba(196, 196, 196, 0.3)" px={20} py={5} rounded={4}>
-          {category}
-        </Text>
-      </Div>
-
+      <Gallery data={images} />
+      <Category data={category} />
       <TouchableWithoutFeedback onPress={handleDetailsPress}>
         <Div>
           <Text fontSize="xl">{title}</Text>
@@ -85,5 +63,36 @@ export function ActivitiesScreen() {
     <Container>
       <FlatList data={data} renderItem={renderItem} keyExtractor={(item) => item.id} />
     </Container>
+  )
+}
+
+export const Category = ({ data }: any) => (
+  <Div alignItems="flex-start" my={16}>
+    <Text bg="rgba(196, 196, 196, 0.3)" px={20} py={5} rounded={4}>
+      {data}
+    </Text>
+  </Div>
+)
+
+export const Gallery = ({ data, ratio = 1.5, ...rest }: any) => {
+  const { width } = Dimensions.get('window')
+  const height = (width - 40) / ratio
+
+  return (
+    <Div h={height} {...rest}>
+      <Swiper dotColor="grey" activeDotColor="white" loop={false}>
+        {data &&
+          data.map((img: string) => (
+            <Image
+              key={img}
+              h={height}
+              rounded={8}
+              source={{
+                uri: `https://ik.imagekit.io/artsflow/tr:w-${width},h-${height},fo-auto/${img}`,
+              }}
+            />
+          ))}
+      </Swiper>
+    </Div>
   )
 }

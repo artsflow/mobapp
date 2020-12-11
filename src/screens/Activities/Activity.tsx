@@ -1,13 +1,35 @@
 import * as React from 'react'
-import { Text } from 'react-native-magnus'
+import { Text, Div } from 'react-native-magnus'
 
 import { Container } from 'components'
+import { Category, Gallery } from './Activities'
 
 export function ActivityScreen({ route }: any) {
-  console.log(route.params)
+  const { category, title, description, frequency, images } = route.params.item
+
+  console.log(route.params.item)
+
   return (
-    <Container>
-      <Text>ArtActivity screen.</Text>
+    <Container disableSafeArea>
+      <Gallery data={images} ratio={1.2} />
+      <Div mx={20}>
+        <Category data={category} />
+        <Text fontSize="xl">{title}</Text>
+        <Text mt={12}>{description.replace(/^\s+|\s+$/g, '')}</Text>
+        <Separator />
+        <AvailableDates data={frequency} />
+      </Div>
     </Container>
+  )
+}
+
+const Separator = () => <Div my={20} bg="#ddd" h={1} />
+
+const AvailableDates = ({ data }: any) => {
+  console.log(data)
+  return (
+    <Div>
+      <Text fontSize="xl">Available Dates</Text>
+    </Div>
   )
 }

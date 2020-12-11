@@ -26,7 +26,11 @@ export function ActivitiesStackScreen() {
   return (
     <ActivitiesStack.Navigator screenOptions={screenOptions}>
       <ActivitiesStack.Screen name="Activities" component={ActivitiesScreen} />
-      <ActivitiesStack.Screen name="Activity" component={ActivityScreen} />
+      <ActivitiesStack.Screen
+        name="Activity"
+        options={{ headerShown: false }}
+        component={ActivityScreen}
+      />
       <ActivitiesStack.Screen
         name="ArtistProfile"
         options={{ title: 'Artist Profile' }}
