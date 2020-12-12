@@ -3,11 +3,12 @@ import { Text, Div } from 'react-native-magnus'
 
 import { Container } from 'components'
 import { Category, Gallery } from './Activities'
+import { getAvailableDatesMap } from './utils'
 
 export function ActivityScreen({ route }: any) {
   const { category, title, description, frequency, images } = route.params.item
 
-  console.log(route.params.item)
+  // console.log(route.params.item)
 
   return (
     <Container disableSafeArea>
@@ -26,7 +27,11 @@ export function ActivityScreen({ route }: any) {
 const Separator = () => <Div my={20} bg="#ddd" h={1} />
 
 const AvailableDates = ({ data }: any) => {
-  console.log(data)
+  const { rrules, exdate } = data
+  const datesMap = getAvailableDatesMap(rrules, exdate)
+
+  console.log(datesMap)
+
   return (
     <Div>
       <Text fontSize="xl">Available Dates</Text>
