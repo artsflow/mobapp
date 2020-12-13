@@ -1,5 +1,6 @@
 import { difference } from 'lodash'
 import { RRuleSet, rrulestr } from 'rrule'
+import { format, addMinutes, addHours } from 'date-fns'
 
 export const getAvailableDatesMap = (rrules: string[], exdate: string[]) => {
   const rruleSet = new RRuleSet()
@@ -31,7 +32,7 @@ export const getAvailableDatesMap = (rrules: string[], exdate: string[]) => {
     const minutes = d.getMinutes()
     const hours = d.getHours()
 
-    const datestr = `${dd}/${mm + 1}/${yy}`
+    const datestr = new Date(yy, mm, dd).toString()
     const timestr = `${hours}:${minutes}`
 
     if (datesMap.has(datestr)) {
@@ -45,4 +46,20 @@ export const getAvailableDatesMap = (rrules: string[], exdate: string[]) => {
   })
 
   return datesMap
+}
+
+export const getTimeSlot = (t: string, duration: number) => {
+  const d = new Date(2020, 0, 1)
+  const [hh, mm] = t.split(':')
+  const from = addMinutes(addHours(d, +hh), +mm)
+  const to = addMinutes(from, +duration)
+  return `${format(from, 'HH:mm')} - ${format(to, 'HH:mm')}`
+}
+
+export const getFrequencyText = (rrules: string[]) => {
+  return rrules.map((r) => {
+    const rule = rrulestr(r)
+    const hhmm = format(rule.options.dtstart, 'HH:mm')
+    return `${rule.toText()} at ${hhmm}`.replace(' for 10 times', '')
+  })
 }

@@ -16,6 +16,8 @@ const EXPLORE_ACTIVITIES = gql`
         rrules
         exdate
       }
+      duration
+      capacity
       price
     }
   }
