@@ -12,12 +12,10 @@ const Item = (item: any) => {
   const navigation = useNavigation()
 
   const handleDetailsPress = () => {
-    console.log('handleDetailsPress')
     navigation.navigate('Activity', { item })
   }
 
   const handleUserPress = () => {
-    console.log('handleUserPress')
     navigation.navigate('ArtistProfile', { item })
   }
 
@@ -55,7 +53,6 @@ const Item = (item: any) => {
 
 export function ActivitiesScreen() {
   const { data } = useActivitiesList()
-  // console.log(loading, error, data)
 
   const renderItem = ({ item }: any) => <Item {...item} />
 

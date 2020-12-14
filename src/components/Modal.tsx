@@ -19,7 +19,9 @@ export function Modal({ isVisible, onClose, title, children }: Props) {
           <Icon color="black" fontSize="xl" name="close" />
         </Button>
       </Div>
-      <Div mt={50}>{children}</Div>
+      <Div mt={50} justifyContent="space-between" flex={1}>
+        {children}
+      </Div>
     </MModal>
   )
 }
