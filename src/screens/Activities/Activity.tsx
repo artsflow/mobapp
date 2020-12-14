@@ -1,16 +1,27 @@
 import * as React from 'react'
-import { Text, Div, Icon } from 'react-native-magnus'
+import { Text, Div, Icon, Button } from 'react-native-magnus'
 import { FlatList, TouchableWithoutFeedback, ScrollView } from 'react-native'
 import { format } from 'date-fns'
 
-import { Container } from 'components'
+import { Container, Modal } from 'components'
 import { Category, Gallery } from './Activities'
 import { getAvailableDatesMap, getTimeSlot, getFrequencyText } from './utils'
 
 export function ActivityScreen({ route }: any) {
-  const { category, title, description, frequency, duration, capacity, images } = route.params.item
+  const {
+    category,
+    title,
+    description,
+    frequency,
+    duration,
+    capacity,
+    price,
+    images,
+  } = route.params.item
   const [selectedDate, setSelectedDate] = React.useState(null)
   const [selectedTime, setSelectedTime] = React.useState(null)
+  const [isVisible, setVisible] = React.useState(false)
+
   const frequencyText = getFrequencyText(frequency.rrules)
 
   const handleChange = ({ d, t }: any) => {
@@ -20,6 +31,11 @@ export function ActivityScreen({ route }: any) {
     if (t) {
       setSelectedTime(t)
     }
+  }
+
+  const handleConfirmBooking = () => {
+    console.log('handleConfirmBooking')
+    setVisible(true)
   }
 
   return (
@@ -82,6 +98,15 @@ export function ActivityScreen({ route }: any) {
           <Separator />
         </Div>
       </ScrollView>
+      <Div row bg="#F0F0F0" p={20} pb={40} justifyContent="space-between" alignItems="center">
+        <Text fontSize="lg">£{price} / session</Text>
+        <Button fontSize="lg" bg="black" px={35} py={15} onPress={handleConfirmBooking}>
+          {selectedTime ? 'Review Dates' : 'Show Dates'}
+        </Button>
+      </Div>
+      <Modal title="Confirm your booking" isVisible={isVisible} onClose={() => setVisible(false)}>
+        <Text>modal content</Text>
+      </Modal>
     </Container>
   )
 }
