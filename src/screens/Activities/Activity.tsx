@@ -64,7 +64,7 @@ export function ActivityScreen({ route }: any) {
               <Text>
                 Frequency:{' '}
                 {frequencyText.map((f, idx) => (
-                  <Text fontWeight="bold">
+                  <Text fontWeight="bold" key={idx}>
                     {f}
                     {idx < frequencyText.length - 1 ? ', ' : ''}
                   </Text>
@@ -135,11 +135,11 @@ const AvailableDates = ({ frequency, duration, selected, onChange }: any) => {
             Press to select the time slot:
           </Text>
           <Div row>
-            {availableTimes.map((t) => {
+            {availableTimes.map((t, idx) => {
               const checked = t === selected.time
               const timeSlot = getTimeSlot(t, duration)
               return (
-                <TouchableWithoutFeedback onPress={() => onChange({ t })}>
+                <TouchableWithoutFeedback onPress={() => onChange({ t })} key={idx}>
                   <Div
                     bg={checked ? 'black' : 'white'}
                     borderWidth={1}
