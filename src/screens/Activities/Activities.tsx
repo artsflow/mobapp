@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Text, Div, Avatar, Icon, Image } from 'react-native-magnus'
 import { FlatList, Dimensions, TouchableWithoutFeedback } from 'react-native'
 import Swiper from 'react-native-swiper'
-import { useNavigation } from '@react-navigation/native'
+import { useNavigation } from 'react-native-navigation-hooks'
 
 import { Container } from 'components'
 import { useActivitiesList } from 'services/activities'
@@ -12,11 +12,11 @@ const Item = (item: any) => {
   const navigation = useNavigation()
 
   const handleDetailsPress = () => {
-    navigation.navigate('Activity', { item })
+    navigation.push('Activity', { item })
   }
 
   const handleUserPress = () => {
-    navigation.navigate('ArtistProfile', { item })
+    navigation.push('ArtistProfile', { item })
   }
 
   return (
