@@ -69,11 +69,10 @@ const Item = (item: any) => {
   )
 }
 
-export function ActivitiesScreen(props) {
+export function ActivitiesScreen() {
   const { data } = useActivitiesList()
   const renderItem = ({ item }: any) => <Item {...item} />
 
-  console.log('props', props)
   return (
     <Container>
       <FlatList data={data} renderItem={renderItem} keyExtractor={(item) => item.id} />
