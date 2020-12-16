@@ -3,6 +3,7 @@ import { Text, Div, Avatar, Icon, Image } from 'react-native-magnus'
 import { FlatList, Dimensions, TouchableWithoutFeedback } from 'react-native'
 import Swiper from 'react-native-swiper'
 import { useNavigation } from 'react-native-navigation-hooks'
+import { Navigation } from 'react-native-navigation'
 
 import { Container } from 'components'
 import { useActivitiesList } from 'services/activities'
@@ -12,7 +13,24 @@ const Item = (item: any) => {
   const navigation = useNavigation()
 
   const handleDetailsPress = () => {
-    navigation.push('Activity', { item })
+    Navigation.push('Activities', {
+      component: {
+        name: 'Activity',
+        passProps: { item },
+        options: {
+          statusBar: {
+            visible: false,
+            hideWithTopBar: true,
+          },
+          topBar: {
+            visible: false,
+          },
+          bottomTabs: {
+            visible: false,
+          },
+        },
+      },
+    })
   }
 
   const handleUserPress = () => {
@@ -51,11 +69,11 @@ const Item = (item: any) => {
   )
 }
 
-export function ActivitiesScreen() {
+export function ActivitiesScreen(props) {
   const { data } = useActivitiesList()
-
   const renderItem = ({ item }: any) => <Item {...item} />
 
+  console.log('props', props)
   return (
     <Container>
       <FlatList data={data} renderItem={renderItem} keyExtractor={(item) => item.id} />

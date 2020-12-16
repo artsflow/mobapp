@@ -1,14 +1,15 @@
 import * as React from 'react'
 import { Text, Div, Icon, Button, Snackbar } from 'react-native-magnus'
 import { ScrollView } from 'react-native'
+import { Navigation } from 'react-native-navigation'
 
 import { Container, Modal } from 'components'
 import { AvailableDates } from './components/AvailableDates'
 import { Category, Gallery } from './Activities'
 import { getFrequencyText } from './utils'
 
-export function ActivityScreen({ item }: any) {
-  const { category, title, description, frequency, duration, capacity, price, images } = item
+export function ActivityScreen(props: any) {
+  const { category, title, description, frequency, duration, capacity, price, images } = props.item
   const [selectedDate, setSelectedDate] = React.useState(null)
   const [selectedTime, setSelectedTime] = React.useState(null)
   const [isVisible, setVisible] = React.useState(false)
@@ -28,7 +29,15 @@ export function ActivityScreen({ item }: any) {
 
   const handleConfirmBooking = () => {
     console.log('handleConfirmBooking')
-    setVisible(true)
+    // setVisible(true)
+    Navigation.showModal({
+      component: {
+        name: 'Modal',
+        passProps: {
+          // isVisible: true,
+        },
+      },
+    })
   }
 
   const handlePayment = () => {
@@ -41,7 +50,7 @@ export function ActivityScreen({ item }: any) {
   }
 
   return (
-    <Container disableSafeArea>
+    <Container disableSafeArea mt={-50}>
       <ScrollView>
         <Gallery data={images} ratio={1.2} />
         <Div mx={20}>
