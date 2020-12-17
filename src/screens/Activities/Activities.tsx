@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Text, Div, Avatar, Icon, Image } from 'react-native-magnus'
+import { Text, Div, Avatar, Image } from 'react-native-magnus'
 import { FlatList, Dimensions, TouchableWithoutFeedback } from 'react-native'
 import Swiper from 'react-native-swiper'
 import { useNavigation } from 'react-native-navigation-hooks'
@@ -53,7 +53,7 @@ const Item = (item: any) => {
                 <Div>
                   <Text>by John Doe</Text>
                   <Div flexDir="row">
-                    <Icon name="star" color="grey" fontSize={12} fontFamily="FontAwesome" mr={5} />
+                    {/* <Icon name="star" color="grey" fontSize={12} fontFamily="FontAwesome" mr={5} /> */}
                     <Text fontSize="xs">4.7</Text>
                   </Div>
                 </Div>

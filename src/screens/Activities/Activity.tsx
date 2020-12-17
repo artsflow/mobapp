@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Text, Div, Icon, Button, Snackbar } from 'react-native-magnus'
+import { Text, Div, Button, Snackbar } from 'react-native-magnus'
 import { ScrollView } from 'react-native'
 import { Navigation } from 'react-native-navigation'
 
@@ -78,31 +78,31 @@ export function ActivityScreen(props: any) {
           </Text>
           <Div>
             <Div row>
-              <Icon
+              {/* <Icon
                 mr={10}
                 name="timer-sand"
                 fontSize="xl"
                 color="black"
                 fontFamily="MaterialCommunityIcons"
-              />
+              /> */}
               <Text>
                 Duration: <Text fontWeight="bold">{duration} mins</Text>
               </Text>
             </Div>
             <Div row my={20}>
-              <Icon mr={10} name="users" fontSize="xl" color="black" fontFamily="FontAwesome5" />
+              {/* <Icon mr={10} name="users" fontSize="xl" color="black" fontFamily="FontAwesome5" /> */}
               <Text>
                 Capacity: <Text fontWeight="bold">{capacity} people</Text>
               </Text>
             </Div>
             <Div row alignItems="flex-start">
-              <Icon
+              {/* <Icon
                 mr={10}
                 name="table-clock"
                 fontSize="xl"
                 color="black"
                 fontFamily="MaterialCommunityIcons"
-              />
+              /> */}
               <Text>Frequency: </Text>
               <Div>
                 {frequencyText.map((f, idx) => (
@@ -148,7 +148,7 @@ export function ActivityScreen(props: any) {
           Continue with payment
         </Button>
         <Snackbar
-          suffix={<Icon name="alert" color="white" fontSize="md" fontFamily="Foundation" />}
+          // suffix={<Icon name="alert" color="white" fontSize="md" fontFamily="Foundation" />}
           ref={snackbarRef}
           bg="red"
           color="white"
