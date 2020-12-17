@@ -40,10 +40,8 @@ export async function init() {
   ])
 
   Navigation.setDefaultOptions({
-    statusBar: {
-      backgroundColor: 'white',
-    },
     topBar: {
+      drawBehind: true,
       title: {
         color: 'black',
       },
