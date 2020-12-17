@@ -20,6 +20,7 @@ module.exports = {
           components: './src/components',
           services: './src/services',
           screens: './src/screens',
+          hooks: './src/hooks',
           utils: './src/utils',
           lib: './src/lib',
         },

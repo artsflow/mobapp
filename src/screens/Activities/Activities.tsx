@@ -18,10 +18,10 @@ const Item = (item: any) => {
         name: 'Activity',
         passProps: { item },
         options: {
-          statusBar: {
-            visible: false,
-            hideWithTopBar: true,
-          },
+          // statusBar: {
+          //   visible: false,
+          //   hideWithTopBar: true,
+          // },
           topBar: {
             visible: false,
           },
