@@ -88,7 +88,7 @@ export const Category = ({ data }: any) => (
   </Div>
 )
 
-export const Gallery = ({ data, ratio = 1.5, ...rest }: any) => {
+export const Gallery = ({ data, ratio = 1.5, roundedTop = 8, roundedBottom = 8, ...rest }: any) => {
   const { width } = Dimensions.get('window')
   const height = (width - 40) / ratio
 
@@ -100,7 +100,8 @@ export const Gallery = ({ data, ratio = 1.5, ...rest }: any) => {
             <Image
               key={img}
               h={height}
-              rounded={8}
+              roundedTop={roundedTop}
+              roundedBottom={roundedBottom}
               source={{
                 uri: `https://ik.imagekit.io/artsflow/tr:w-${width},h-${height},fo-auto/${img}`,
               }}

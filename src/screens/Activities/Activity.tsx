@@ -67,7 +67,7 @@ export function ActivityScreen(props: any) {
   return (
     <Container disableSafeArea mt={isAndroid ? 0 : -dimensions.statusBarHeight}>
       <ScrollView>
-        <Gallery data={images} ratio={1.2} />
+        <Gallery data={images} ratio={1.2} roundedTop={0} />
         <Div mx={20}>
           <Category data={category} />
           <Text fontSize="xl">{title}</Text>
