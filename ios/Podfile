@@ -10,7 +10,6 @@ target 'artsflow' do
 
 
 
-  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
   target 'artsflowTests' do
     inherit! :complete

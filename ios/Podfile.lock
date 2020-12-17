@@ -336,7 +336,7 @@ PODS:
     - React-RCTText
   - RNCMaskedView (0.1.10):
     - React
-  - RNDeviceInfo (7.3.0):
+  - RNDeviceInfo (7.3.1):
     - React-Core
   - RNFastImage (8.3.4):
     - React-Core
@@ -570,7 +570,7 @@ SPEC CHECKSUMS:
   ReactCommon: 4167844018c9ed375cc01a843e9ee564399e53c3
   ReactNativeNavigation: 91c082139a6ee8ef7d5c04c70995fdd2e8ababc9
   RNCMaskedView: 5a8ec07677aa885546a0d98da336457e2bea557f
-  RNDeviceInfo: 2392152a6082f106af50ae9002b094fcc769f922
+  RNDeviceInfo: 6ecb1d1c87d20e4c62354be0348de23362824dcd
   RNFastImage: d4870d58f5936111c56218dbd7fcfc18e65b58ff
   RNGestureHandler: 9b7e605a741412e20e13c512738a31bd1611759b
   RNReanimated: e03f7425cb7a38dcf1b644d680d1bfc91c3337ad
@@ -582,6 +582,6 @@ SPEC CHECKSUMS:
   Yoga: 7d13633d129fd179e01b8953d38d47be90db185a
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: fbe6ac9b29ba4ac15617bd03da3d6a5e52d9bb73
+PODFILE CHECKSUM: 2b79c85ee1edcc74a09613f6278de95f9ab11d72
 
 COCOAPODS: 1.10.0
