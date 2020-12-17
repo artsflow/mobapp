@@ -41,7 +41,7 @@ export async function init() {
 
   Navigation.setDefaultOptions({
     statusBar: {
-      backgroundColor: 'pink',
+      backgroundColor: 'white',
     },
     topBar: {
       title: {
