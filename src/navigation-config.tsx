@@ -41,7 +41,6 @@ export async function init() {
 
   Navigation.setDefaultOptions({
     topBar: {
-      drawBehind: true,
       title: {
         color: 'black',
       },
@@ -55,14 +54,16 @@ export async function init() {
     bottomTabs: {
       backgroundColor: '#F0F0F0',
       hideShadow: true,
+      titleDisplayMode: 'alwaysShow',
     },
     bottomTab: {
-      fontSize: 14,
-      selectedFontSize: 14,
+      fontSize: 13,
+      selectedFontSize: 13,
       selectedTextColor: 'black',
       selectedIconColor: 'black',
       textColor: 'grey',
       iconColor: 'grey',
+      iconInsets: { top: 5 },
     },
   })
 
