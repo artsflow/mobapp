@@ -1,9 +1,10 @@
 import * as React from 'react'
-import { Text, Div, Avatar, Image, Icon } from 'react-native-magnus'
+import { Text, Div, Avatar, Icon } from 'react-native-magnus'
 import { FlatList, Dimensions, TouchableWithoutFeedback } from 'react-native'
 import Swiper from 'react-native-swiper'
 import { useNavigation } from 'react-native-navigation-hooks'
 import { Navigation } from 'react-native-navigation'
+import FastImage from 'react-native-fast-image'
 
 import { Container } from 'components'
 import { useActivitiesList } from 'services/activities'
@@ -88,20 +89,31 @@ export const Category = ({ data }: any) => (
   </Div>
 )
 
-export const Gallery = ({ data, ratio = 1.5, roundedTop = 8, roundedBottom = 8, ...rest }: any) => {
+export const Gallery = ({
+  data,
+  ratio = 1.8,
+  roundedTop = 16,
+  roundedBottom = 16,
+  ...rest
+}: any) => {
   const { width } = Dimensions.get('window')
   const height = (width - 40) / ratio
+
+  const rounded = {
+    borderTopLeftRadius: roundedTop ? roundedTop : 0,
+    borderTopRightRadius: roundedTop ? roundedTop : 0,
+    borderBottomLeftRadius: roundedBottom ? roundedBottom : 0,
+    borderBottomRightRadius: roundedBottom ? roundedBottom : 0,
+  }
 
   return (
     <Div h={height} {...rest}>
       <Swiper dotColor="grey" activeDotColor="white" loop={false}>
         {data &&
           data.map((img: string) => (
-            <Image
+            <FastImage
               key={img}
-              h={height}
-              roundedTop={roundedTop}
-              roundedBottom={roundedBottom}
+              style={{ height, ...rounded }}
               source={{
                 uri: `https://ik.imagekit.io/artsflow/tr:w-${width},h-${height},fo-auto/${img}`,
               }}

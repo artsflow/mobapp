@@ -50,6 +50,7 @@ export async function init() {
       background: {
         color: 'white',
       },
+      elevation: 0,
     },
     bottomTabs: {
       backgroundColor: '#F0F0F0',
@@ -57,8 +58,7 @@ export async function init() {
       titleDisplayMode: 'alwaysShow',
     },
     bottomTab: {
-      fontSize: 13,
-      selectedFontSize: 13,
+      fontSize: 12,
       selectedTextColor: 'black',
       selectedIconColor: 'black',
       textColor: 'grey',
