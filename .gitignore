@@ -63,3 +63,5 @@ buck-out/
 /ios/Pods/
 
 coverage
+android/app/release
+android/java_pid*
