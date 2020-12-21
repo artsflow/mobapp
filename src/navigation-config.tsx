@@ -1,8 +1,8 @@
 import { Navigation } from 'react-native-navigation'
-// import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
-// import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons'
-// import AntDesign from 'react-native-vector-icons/AntDesign'
-// import FontAwesome from 'react-native-vector-icons/FontAwesome'
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
+import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons'
+import AntDesign from 'react-native-vector-icons/AntDesign'
+import FontAwesome from 'react-native-vector-icons/FontAwesome'
 
 import App from './App'
 
@@ -32,12 +32,12 @@ export async function init() {
     Navigation.registerComponent(key, () => App(C))
   })
 
-  // const [ActivitiesIcon, SavedIcon, MessagesIcon, ProfileIcon] = await Promise.all([
-  //   MaterialIcons.getImageSource('explore', 24),
-  //   SimpleLineIcons.getImageSource('heart', 24),
-  //   AntDesign.getImageSource('message1', 24),
-  //   FontAwesome.getImageSource('user-circle', 24),
-  // ])
+  const [ActivitiesIcon, SavedIcon, MessagesIcon, ProfileIcon] = await Promise.all([
+    MaterialIcons.getImageSource('explore', 24),
+    SimpleLineIcons.getImageSource('heart', 24),
+    AntDesign.getImageSource('message1', 24),
+    FontAwesome.getImageSource('user-circle', 24),
+  ])
 
   Navigation.setDefaultOptions({
     topBar: {
@@ -86,7 +86,7 @@ export async function init() {
                         },
                         bottomTab: {
                           text: 'Activities',
-                          // icon: ActivitiesIcon,
+                          icon: ActivitiesIcon,
                         },
                       },
                     },
@@ -107,7 +107,7 @@ export async function init() {
                         },
                         bottomTab: {
                           text: 'Saved',
-                          // icon: SavedIcon,
+                          icon: SavedIcon,
                         },
                       },
                     },
@@ -128,7 +128,7 @@ export async function init() {
                         },
                         bottomTab: {
                           text: 'Messages',
-                          // icon: MessagesIcon,
+                          icon: MessagesIcon,
                         },
                       },
                     },
@@ -149,7 +149,7 @@ export async function init() {
                         },
                         bottomTab: {
                           text: 'Profile',
-                          // icon: ProfileIcon,
+                          icon: ProfileIcon,
                         },
                       },
                     },

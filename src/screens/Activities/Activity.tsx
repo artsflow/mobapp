@@ -1,11 +1,13 @@
 import * as React from 'react'
 import { Text, Div, Button, Snackbar, Icon } from 'react-native-magnus'
-import { ScrollView } from 'react-native'
+import { ScrollView, Dimensions } from 'react-native'
 import { Navigation } from 'react-native-navigation'
+import Swiper from 'react-native-swiper'
+import FastImage from 'react-native-fast-image'
 
 import { Container, Modal } from 'components'
 import { AvailableDates } from './components/AvailableDates'
-import { Category, Gallery } from './Activities'
+import { Category } from './Activities'
 import { getFrequencyText } from './utils'
 import { useNavigationDimensions } from 'hooks'
 import { isAndroid } from 'utils'
@@ -165,3 +167,32 @@ export function ActivityScreen(props: any) {
 }
 
 const Separator = () => <Div my={20} bg="#ddd" h={1} />
+
+const Gallery = ({ data, ratio = 1.8, roundedTop = 16, roundedBottom = 16, ...rest }: any) => {
+  const { width } = Dimensions.get('window')
+  const height = (width - 40) / ratio
+
+  const rounded = {
+    borderTopLeftRadius: roundedTop ? roundedTop : 0,
+    borderTopRightRadius: roundedTop ? roundedTop : 0,
+    borderBottomLeftRadius: roundedBottom ? roundedBottom : 0,
+    borderBottomRightRadius: roundedBottom ? roundedBottom : 0,
+  }
+
+  return (
+    <Div h={height} {...rest}>
+      <Swiper dotColor="grey" activeDotColor="white" loop={false}>
+        {data &&
+          data.map((img: string) => (
+            <FastImage
+              key={img}
+              style={{ height, ...rounded }}
+              source={{
+                uri: `https://ik.imagekit.io/artsflow/tr:w-${width},h-${height},fo-auto/${img}`,
+              }}
+            />
+          ))}
+      </Swiper>
+    </Div>
+  )
+}

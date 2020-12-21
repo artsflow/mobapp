@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { Text, Div, Avatar, Icon } from 'react-native-magnus'
 import { FlatList, Dimensions, TouchableWithoutFeedback } from 'react-native'
-import Swiper from 'react-native-swiper'
 import { useNavigation } from 'react-native-navigation-hooks'
 import { Navigation } from 'react-native-navigation'
 import FastImage from 'react-native-fast-image'
@@ -19,10 +18,6 @@ const Item = (item: any) => {
         name: 'Activity',
         passProps: { item },
         options: {
-          // statusBar: {
-          //   visible: false,
-          //   hideWithTopBar: true,
-          // },
           topBar: {
             visible: false,
           },
@@ -38,12 +33,21 @@ const Item = (item: any) => {
     navigation.push('ArtistProfile', { item })
   }
 
+  const { width } = Dimensions.get('window')
+  const height = (width - 40) / 1.8
+
   return (
     <Div mx={20} mb={50}>
-      <Gallery data={images} />
-      <Category data={category} />
       <TouchableWithoutFeedback onPress={handleDetailsPress}>
         <Div>
+          <FastImage
+            key={images[0]}
+            style={{ height, borderRadius: 16 }}
+            source={{
+              uri: `https://ik.imagekit.io/artsflow/tr:w-${width},h-${height},fo-auto/${images[0]}`,
+            }}
+          />
+          <Category data={category} />
           <Text fontSize="xl">{title}</Text>
           <Text mt={12}>{description.slice(0, 150).replace(/^\s*\n/gm, '')}...</Text>
 
@@ -88,38 +92,3 @@ export const Category = ({ data }: any) => (
     </Text>
   </Div>
 )
-
-export const Gallery = ({
-  data,
-  ratio = 1.8,
-  roundedTop = 16,
-  roundedBottom = 16,
-  ...rest
-}: any) => {
-  const { width } = Dimensions.get('window')
-  const height = (width - 40) / ratio
-
-  const rounded = {
-    borderTopLeftRadius: roundedTop ? roundedTop : 0,
-    borderTopRightRadius: roundedTop ? roundedTop : 0,
-    borderBottomLeftRadius: roundedBottom ? roundedBottom : 0,
-    borderBottomRightRadius: roundedBottom ? roundedBottom : 0,
-  }
-
-  return (
-    <Div h={height} {...rest}>
-      <Swiper dotColor="grey" activeDotColor="white" loop={false}>
-        {data &&
-          data.map((img: string) => (
-            <FastImage
-              key={img}
-              style={{ height, ...rounded }}
-              source={{
-                uri: `https://ik.imagekit.io/artsflow/tr:w-${width},h-${height},fo-auto/${img}`,
-              }}
-            />
-          ))}
-      </Swiper>
-    </Div>
-  )
-}
