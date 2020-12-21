@@ -11,6 +11,8 @@ target 'artsflow' do
 
 
 
+  pod 'RNSentry', :path => '../node_modules/@sentry/react-native'
+
   target 'artsflowTests' do
     inherit! :complete
     # Pods for testing
