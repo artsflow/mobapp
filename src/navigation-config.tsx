@@ -72,28 +72,28 @@ export async function init() {
       root: {
         bottomTabs: {
           children: [
-            // {
-            //   stack: {
-            //     children: [
-            //       {
-            //         component: {
-            //           id: 'Activities',
-            //           name: 'Activities',
-            //           options: {
-            //             topBar: {
-            //               noBorder: true,
-            //               title: { text: 'Activities' },
-            //             },
-            //             bottomTab: {
-            //               text: 'Activities',
-            //               icon: ActivitiesIcon,
-            //             },
-            //           },
-            //         },
-            //       },
-            //     ],
-            //   },
-            // },
+            {
+              stack: {
+                children: [
+                  {
+                    component: {
+                      id: 'Activities',
+                      name: 'Activities',
+                      options: {
+                        topBar: {
+                          noBorder: true,
+                          title: { text: 'Activities' },
+                        },
+                        bottomTab: {
+                          text: 'Activities',
+                          // icon: ActivitiesIcon,
+                        },
+                      },
+                    },
+                  },
+                ],
+              },
+            },
             {
               stack: {
                 children: [
