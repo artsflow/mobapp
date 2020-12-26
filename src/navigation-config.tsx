@@ -7,9 +7,9 @@ import { Navigation } from 'react-native-navigation'
 import App from './App'
 
 import {
-  ActivitiesScreen,
-  ActivityScreen,
-  ArtistProfileScreen,
+  // ActivitiesScreen,
+  // ActivityScreen,
+  // ArtistProfileScreen,
   SavedScreen,
   MessagesScreen,
   ProfileScreen,
@@ -19,9 +19,9 @@ import { Modal } from 'components'
 
 const Screens = new Map()
 
-Screens.set('Activities', ActivitiesScreen)
-Screens.set('Activity', ActivityScreen)
-Screens.set('ArtistProfile', ArtistProfileScreen)
+// Screens.set('Activities', ActivitiesScreen)
+// Screens.set('Activity', ActivityScreen)
+// Screens.set('ArtistProfile', ArtistProfileScreen)
 Screens.set('Saved', SavedScreen)
 Screens.set('Messages', MessagesScreen)
 Screens.set('Profile', ProfileScreen)
@@ -72,28 +72,28 @@ export async function init() {
       root: {
         bottomTabs: {
           children: [
-            {
-              stack: {
-                children: [
-                  {
-                    component: {
-                      id: 'Activities',
-                      name: 'Activities',
-                      options: {
-                        topBar: {
-                          noBorder: true,
-                          title: { text: 'Activities' },
-                        },
-                        bottomTab: {
-                          text: 'Activities',
-                          // icon: ActivitiesIcon,
-                        },
-                      },
-                    },
-                  },
-                ],
-              },
-            },
+            // {
+            //   stack: {
+            //     children: [
+            //       {
+            //         component: {
+            //           id: 'Activities',
+            //           name: 'Activities',
+            //           options: {
+            //             topBar: {
+            //               noBorder: true,
+            //               title: { text: 'Activities' },
+            //             },
+            //             bottomTab: {
+            //               text: 'Activities',
+            //               // icon: ActivitiesIcon,
+            //             },
+            //           },
+            //         },
+            //       },
+            //     ],
+            //   },
+            // },
             {
               stack: {
                 children: [
