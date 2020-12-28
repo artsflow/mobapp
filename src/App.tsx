@@ -1,38 +1,36 @@
-// import 'react-native-gesture-handler'
+import 'react-native-gesture-handler'
 import * as React from 'react'
-// import { ThemeProvider } from 'react-native-magnus'
-// import { SafeAreaProvider } from 'react-native-safe-area-context'
-// import { NavigationProvider } from 'react-native-navigation-hooks'
-// import { SWRConfig } from 'swr'
+import { ThemeProvider } from 'react-native-magnus'
+import { SafeAreaProvider } from 'react-native-safe-area-context'
+import { NavigationProvider } from 'react-native-navigation-hooks'
+import { SWRConfig } from 'swr'
 import * as Sentry from '@sentry/react-native'
 
-// import { client } from 'services/client'
+import { client } from 'services/client'
 
-// export const fetcher = (query: string) => client.request(query)
+export const fetcher = (query: string) => client.request(query)
 
 Sentry.init({
   dsn: 'https://7f596b9fe4374bb4afd7e425b46a9c2e@o494579.ingest.sentry.io/5565940',
 })
 
-// const App2 = (Component: any) => (props: any) => {
-//   return (
-//     <ThemeProvider>
-//       <SWRConfig
-//         value={{
-//           revalidateOnFocus: false,
-//           fetcher,
-//         }}
-//       >
-//         <SafeAreaProvider>
-//           <NavigationProvider value={{ componentId: props.componentId }}>
-//             <Component {...props} />
-//           </NavigationProvider>
-//         </SafeAreaProvider>
-//       </SWRConfig>
-//     </ThemeProvider>
-//   )
-// }
-
-const App = (Component: any) => (props: any) => <Component {...props} />
+const App = (Component: any) => (props: any) => {
+  return (
+    <ThemeProvider>
+      <SWRConfig
+        value={{
+          revalidateOnFocus: false,
+          fetcher,
+        }}
+      >
+        <SafeAreaProvider>
+          <NavigationProvider value={{ componentId: props.componentId }}>
+            <Component {...props} />
+          </NavigationProvider>
+        </SafeAreaProvider>
+      </SWRConfig>
+    </ThemeProvider>
+  )
+}
 
 export default App

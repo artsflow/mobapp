@@ -7,25 +7,25 @@ import { Navigation } from 'react-native-navigation'
 import App from './App'
 
 import {
-  // ActivitiesScreen,
-  // ActivityScreen,
-  // ArtistProfileScreen,
-  // SavedScreen,
-  // MessagesScreen,
+  ActivitiesScreen,
+  ActivityScreen,
+  ArtistProfileScreen,
+  SavedScreen,
+  MessagesScreen,
   ProfileScreen,
 } from 'screens'
 
-// import { Modal } from 'components'
+import { Modal } from 'components'
 
 const Screens = new Map()
 
-// Screens.set('Activities', ActivitiesScreen)
-// Screens.set('Activity', ActivityScreen)
-// Screens.set('ArtistProfile', ArtistProfileScreen)
-// Screens.set('Saved', SavedScreen)
-// Screens.set('Messages', MessagesScreen)
+Screens.set('Activities', ActivitiesScreen)
+Screens.set('Activity', ActivityScreen)
+Screens.set('ArtistProfile', ArtistProfileScreen)
+Screens.set('Saved', SavedScreen)
+Screens.set('Messages', MessagesScreen)
 Screens.set('Profile', ProfileScreen)
-// Screens.set('Modal', Modal)
+Screens.set('Modal', Modal)
 
 export async function init() {
   Screens.forEach((C, key) => {
@@ -72,70 +72,70 @@ export async function init() {
       root: {
         bottomTabs: {
           children: [
-            // {
-            //   stack: {
-            //     children: [
-            //       {
-            //         component: {
-            //           id: 'Activities',
-            //           name: 'Activities',
-            //           options: {
-            //             topBar: {
-            //               noBorder: true,
-            //               title: { text: 'Activities' },
-            //             },
-            //             bottomTab: {
-            //               text: 'Activities',
-            //               // icon: ActivitiesIcon,
-            //             },
-            //           },
-            //         },
-            //       },
-            //     ],
-            //   },
-            // },
-            // {
-            //   stack: {
-            //     children: [
-            //       {
-            //         component: {
-            //           name: 'Saved',
-            //           options: {
-            //             topBar: {
-            //               noBorder: true,
-            //               title: { text: 'Saved' },
-            //             },
-            //             bottomTab: {
-            //               text: 'Saved',
-            //               // icon: SavedIcon,
-            //             },
-            //           },
-            //         },
-            //       },
-            //     ],
-            //   },
-            // },
-            // {
-            //   stack: {
-            //     children: [
-            //       {
-            //         component: {
-            //           name: 'Messages',
-            //           options: {
-            //             topBar: {
-            //               noBorder: true,
-            //               title: { text: 'Messages' },
-            //             },
-            //             bottomTab: {
-            //               text: 'Messages',
-            //               // icon: MessagesIcon,
-            //             },
-            //           },
-            //         },
-            //       },
-            //     ],
-            //   },
-            // },
+            {
+              stack: {
+                children: [
+                  {
+                    component: {
+                      id: 'Activities',
+                      name: 'Activities',
+                      options: {
+                        topBar: {
+                          noBorder: true,
+                          title: { text: 'Activities' },
+                        },
+                        bottomTab: {
+                          text: 'Activities',
+                          // icon: ActivitiesIcon,
+                        },
+                      },
+                    },
+                  },
+                ],
+              },
+            },
+            {
+              stack: {
+                children: [
+                  {
+                    component: {
+                      name: 'Saved',
+                      options: {
+                        topBar: {
+                          noBorder: true,
+                          title: { text: 'Saved' },
+                        },
+                        bottomTab: {
+                          text: 'Saved',
+                          // icon: SavedIcon,
+                        },
+                      },
+                    },
+                  },
+                ],
+              },
+            },
+            {
+              stack: {
+                children: [
+                  {
+                    component: {
+                      name: 'Messages',
+                      options: {
+                        topBar: {
+                          noBorder: true,
+                          title: { text: 'Messages' },
+                        },
+                        bottomTab: {
+                          text: 'Messages',
+                          // icon: MessagesIcon,
+                        },
+                      },
+                    },
+                  },
+                ],
+              },
+            },
             {
               stack: {
                 children: [
