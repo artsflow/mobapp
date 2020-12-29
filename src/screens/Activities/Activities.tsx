@@ -1,8 +1,6 @@
 import * as React from 'react'
 import { Text, Div, Avatar, Icon } from 'react-native-magnus'
 import { FlatList, Dimensions, TouchableWithoutFeedback } from 'react-native'
-import { useNavigation } from 'react-native-navigation-hooks'
-import { Navigation } from 'react-native-navigation'
 import FastImage from 'react-native-fast-image'
 
 import { Container } from 'components'
@@ -10,27 +8,26 @@ import { useActivitiesList } from 'services/activities'
 
 const Item = (item: any) => {
   const { category, title, description, price, images } = item
-  const navigation = useNavigation()
 
   const handleDetailsPress = () => {
-    Navigation.push('Activities', {
-      component: {
-        name: 'Activity',
-        passProps: { item },
-        options: {
-          topBar: {
-            visible: false,
-          },
-          bottomTabs: {
-            visible: false,
-          },
-        },
-      },
-    })
+    // Navigation.push('Activities', {
+    //   component: {
+    //     name: 'Activity',
+    //     passProps: { item },
+    //     options: {
+    //       topBar: {
+    //         visible: false,
+    //       },
+    //       bottomTabs: {
+    //         visible: false,
+    //       },
+    //     },
+    //   },
+    // })
   }
 
   const handleUserPress = () => {
-    navigation.push('ArtistProfile', { item })
+    // navigation.push('ArtistProfile', { item })
   }
 
   const { width } = Dimensions.get('window')

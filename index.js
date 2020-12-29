@@ -1,3 +1,5 @@
-import { init } from './src/navigation-config'
+import { AppRegistry } from 'react-native'
+import App from './src/App'
+import { name as appName } from './app.json'
 
-init()
+AppRegistry.registerComponent(appName, () => App)
