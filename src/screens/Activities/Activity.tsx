@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { Text, Div, Button, Snackbar, Icon } from 'react-native-magnus'
 import { ScrollView, Dimensions } from 'react-native'
-import { Navigation } from 'react-native-navigation'
 import Swiper from 'react-native-swiper'
 import FastImage from 'react-native-fast-image'
 
@@ -9,15 +8,21 @@ import { Container, Modal } from 'components'
 import { AvailableDates } from './components/AvailableDates'
 import { Category } from './Activities'
 import { getFrequencyText } from './utils'
-import { useNavigationDimensions } from 'hooks'
-import { isAndroid } from 'utils'
 
-export function ActivityScreen(props: any) {
-  const { category, title, description, frequency, duration, capacity, price, images } = props.item
+export function ActivityScreen({ route }: any) {
+  const {
+    category,
+    title,
+    description,
+    frequency,
+    duration,
+    capacity,
+    price,
+    images,
+  } = route.params.item
   const [selectedDate, setSelectedDate] = React.useState(null)
   const [selectedTime, setSelectedTime] = React.useState(null)
   const [isVisible, setVisible] = React.useState(false)
-  const dimensions = useNavigationDimensions()
 
   const frequencyText = getFrequencyText(frequency.rrules)
   const snackbarRef: any = React.createRef()
@@ -32,7 +37,7 @@ export function ActivityScreen(props: any) {
     }
   }
 
-  console.log(dimensions)
+  // console.log(dimensions)
 
   // { statusBarHeight: 49.45454406738281,
   //   topBarHeight: 56,
@@ -47,14 +52,6 @@ export function ActivityScreen(props: any) {
   const handleConfirmBooking = () => {
     console.log('handleConfirmBooking')
     // setVisible(true)
-    Navigation.showModal({
-      component: {
-        name: 'Modal',
-        passProps: {
-          // isVisible: true,
-        },
-      },
-    })
   }
 
   const handlePayment = () => {
@@ -67,7 +64,7 @@ export function ActivityScreen(props: any) {
   }
 
   return (
-    <Container disableSafeArea mt={isAndroid ? 0 : -dimensions.statusBarHeight}>
+    <Container disableSafeArea>
       <ScrollView>
         <Gallery data={images} ratio={1.2} roundedTop={0} />
         <Div mx={20}>
