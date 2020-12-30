@@ -9,7 +9,7 @@ import { AvailableDates } from './components/AvailableDates'
 import { Category } from './Activities'
 import { getFrequencyText } from './utils'
 
-export function ActivityScreen({ route }: any) {
+export function ActivityScreen({ route, navigation }: any) {
   const {
     category,
     title,
@@ -52,6 +52,7 @@ export function ActivityScreen({ route }: any) {
   const handleConfirmBooking = () => {
     console.log('handleConfirmBooking')
     // setVisible(true)
+    navigation.navigate('Modal')
   }
 
   const handlePayment = () => {

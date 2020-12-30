@@ -13,5 +13,5 @@ export function Container({ children, disableSafeArea = false, ...rest }: any) {
     return content
   }
 
-  return <SafeAreaView style={{ flex: 1 }}>{content}</SafeAreaView>
+  return <SafeAreaView style={{ flex: 1, backgroundColor: 'white' }}>{content}</SafeAreaView>
 }

@@ -4,10 +4,9 @@ import { ThemeProvider } from 'react-native-magnus'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { SWRConfig } from 'swr'
 import * as Sentry from '@sentry/react-native'
-import { NavigationContainer } from '@react-navigation/native'
 
 import { client } from 'services/client'
-import { TabNavigator } from './navigation/Tabs'
+import { Navigator } from './navigation'
 
 export const fetcher = (query: string) => client.request(query)
 
@@ -17,20 +16,18 @@ Sentry.init({
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <ThemeProvider>
-        <SWRConfig
-          value={{
-            revalidateOnFocus: false,
-            fetcher,
-          }}
-        >
-          <SafeAreaProvider>
-            <TabNavigator />
-          </SafeAreaProvider>
-        </SWRConfig>
-      </ThemeProvider>
-    </NavigationContainer>
+    <ThemeProvider>
+      <SWRConfig
+        value={{
+          revalidateOnFocus: false,
+          fetcher,
+        }}
+      >
+        <SafeAreaProvider>
+          <Navigator />
+        </SafeAreaProvider>
+      </SWRConfig>
+    </ThemeProvider>
   )
 }
 
