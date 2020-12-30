@@ -9,8 +9,17 @@ import { AvailableDates } from './components/AvailableDates'
 import { Category } from './Activities'
 import { getFrequencyText } from './utils'
 
-export function ActivityScreen(props: any) {
-  const { category, title, description, frequency, duration, capacity, price, images } = props.item
+export function ActivityScreen({ route }: any) {
+  const {
+    category,
+    title,
+    description,
+    frequency,
+    duration,
+    capacity,
+    price,
+    images,
+  } = route.params.item
   const [selectedDate, setSelectedDate] = React.useState(null)
   const [selectedTime, setSelectedTime] = React.useState(null)
   const [isVisible, setVisible] = React.useState(false)

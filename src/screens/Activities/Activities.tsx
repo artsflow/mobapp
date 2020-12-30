@@ -2,12 +2,14 @@ import * as React from 'react'
 import { Text, Div, Avatar, Icon } from 'react-native-magnus'
 import { FlatList, Dimensions, TouchableWithoutFeedback } from 'react-native'
 import FastImage from 'react-native-fast-image'
+import { useNavigation } from '@react-navigation/native'
 
 import { Container } from 'components'
 import { useActivitiesList } from 'services/activities'
 
 const Item = (item: any) => {
   const { category, title, description, price, images } = item
+  const navigation = useNavigation()
 
   const handleDetailsPress = () => {
     // Navigation.push('Activities', {
@@ -24,6 +26,7 @@ const Item = (item: any) => {
     //     },
     //   },
     // })
+    navigation.navigate('Activity', { item })
   }
 
   const handleUserPress = () => {
