@@ -13,31 +13,35 @@ import {
 } from './Stacks'
 import { client } from 'services/client'
 
+import { ActivitiesIcon, MessagesIcon, SavedIcon } from './icons'
+
 export const fetcher = (query: string) => client.request(query)
 
-const TAB_HEIGHT = 75
+const TAB_HEIGHT = 65
 const Tab = createBottomTabNavigator()
 
 export const TabNavigator = () => {
   const insets = useSafeAreaInsets()
+
+  const tabBarOptions = {
+    activeTintColor: '#1D1D26',
+    inactiveTintColor: '#bbbbbe',
+    tabStyle: {
+      paddingTop: 15,
+      paddingBottom: 10,
+    },
+    labelStyle: {
+      marginTop: 8,
+      fontSize: 12,
+    },
+    style: {
+      backgroundColor: '#fff',
+      height: TAB_HEIGHT + insets.bottom,
+    },
+  }
+
   return (
-    <Tab.Navigator
-      screenOptions={handleScreenOptions}
-      tabBarOptions={{
-        activeTintColor: 'black',
-        inactiveTintColor: 'gray',
-        labelStyle: {},
-        tabStyle: {
-          paddingVertical: 15,
-        },
-        style: {
-          backgroundColor: '#F0F0F0',
-          borderTopLeftRadius: 10,
-          borderTopRightRadius: 10,
-          height: TAB_HEIGHT + insets.bottom,
-        },
-      }}
-    >
+    <Tab.Navigator screenOptions={handleScreenOptions} tabBarOptions={tabBarOptions}>
       <Tab.Screen name="Activities" component={ActivitiesStackScreen} options={handleOptions} />
       <Tab.Screen name="Saved" component={SavedStackScreen} />
       <Tab.Screen name="Messages" component={MessagesStackScreen} />
@@ -61,33 +65,25 @@ const getTabBarVisibility = (route: any) => {
 }
 
 const handleScreenOptions = ({ route }: any) => ({
-  tabBarIcon: ({ color }: any) => {
-    let name = ''
-    let fontFamily: any
-
+  tabBarIcon: ({ color, focused }: any) => {
     switch (route.name) {
       case 'Activities':
-        name = 'explore'
-        fontFamily = 'MaterialIcons'
-
-        break
+        return <ActivitiesIcon focused={focused} />
       case 'Saved':
-        name = 'heart'
-        fontFamily = 'SimpleLineIcons'
-
-        break
+        return <SavedIcon focused={focused} />
       case 'Messages':
-        name = 'message1'
-        fontFamily = 'AntDesign'
-
-        break
+        return <MessagesIcon focused={focused} />
       case 'Profile':
-        name = 'user-circle'
-        fontFamily = 'FontAwesome'
-
-        break
+        return (
+          <Icon
+            name="user-circle"
+            fontFamily="FontAwesome"
+            color={focused ? '#47BCC8' : color}
+            fontSize={22}
+          />
+        )
+      default:
+        return null
     }
-
-    return <Icon name={name} fontFamily={fontFamily} color={color} fontSize={24} />
   },
 })
