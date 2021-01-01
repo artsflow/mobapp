@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Text, Div, Avatar, Icon } from 'react-native-magnus'
 import { FlatList, Dimensions, TouchableWithoutFeedback } from 'react-native'
 import FastImage from 'react-native-fast-image'
-import { useNavigation } from '@react-navigation/native'
+import { useNavigation, useScrollToTop } from '@react-navigation/native'
 
 import { Container } from 'components'
 import { useActivitiesList } from 'services/activities'
@@ -78,9 +78,13 @@ export function ActivitiesScreen() {
   const { data } = useActivitiesList()
   const renderItem = ({ item }: any) => <Item {...item} />
 
+  const ref = React.useRef(null)
+
+  useScrollToTop(ref)
+
   return (
     <Container>
-      <FlatList data={data} renderItem={renderItem} keyExtractor={(item) => item.id} />
+      <FlatList ref={ref} data={data} renderItem={renderItem} keyExtractor={(item) => item.id} />
     </Container>
   )
 }
