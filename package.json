@@ -19,6 +19,8 @@
     "reinstall": "rm -rf node_modules yarn.lock && yarn"
   },
   "dependencies": {
+    "@microsoft/applicationinsights-react-native": "^2.2.9",
+    "@microsoft/applicationinsights-web": "^2.5.10",
     "@react-native-community/masked-view": "^0.1.10",
     "@react-navigation/bottom-tabs": "^5.11.2",
     "@react-navigation/native": "^5.8.10",
