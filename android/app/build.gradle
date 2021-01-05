@@ -129,7 +129,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.artsflow.app"
+        applicationId "com.artsflow"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
