@@ -4,7 +4,7 @@ import { ScrollView, Dimensions } from 'react-native'
 import Swiper from 'react-native-swiper'
 import FastImage from 'react-native-fast-image'
 
-import { Container, Modal } from 'components'
+import { Container } from 'components'
 import { AvailableDates } from './components/AvailableDates'
 import { Category } from './Activities'
 import { getFrequencyText } from './utils'
@@ -22,7 +22,6 @@ export function ActivityScreen({ route, navigation }: any) {
   } = route.params.item
   const [selectedDate, setSelectedDate] = React.useState(null)
   const [selectedTime, setSelectedTime] = React.useState(null)
-  const [isVisible, setVisible] = React.useState(false)
 
   const frequencyText = getFrequencyText(frequency.rrules)
   const snackbarRef: any = React.createRef()
@@ -37,22 +36,9 @@ export function ActivityScreen({ route, navigation }: any) {
     }
   }
 
-  // console.log(dimensions)
-
-  // { statusBarHeight: 49.45454406738281,
-  //   topBarHeight: 56,
-  //   backButtonId: 'RNN.back',
-  //   bottomTabsHeight: 56 }
-
-  // { statusBarHeight: 48,
-  //   topBarHeight: 44,
-  //   backButtonId: undefined,
-  //   bottomTabsHeight: 83 }
-
   const handleConfirmBooking = () => {
     console.log('handleConfirmBooking')
-    // setVisible(true)
-    navigation.navigate('Modal')
+    navigation.navigate('Modal', { title: 'Confirm your booking', content: confirmBooking })
   }
 
   const handlePayment = () => {
@@ -63,6 +49,39 @@ export function ActivityScreen({ route, navigation }: any) {
     }
     console.log(selectedDate, selectedTime)
   }
+
+  const confirmBooking = () => (
+    <>
+      <Div>
+        <Text fontSize="md">Event Info:</Text>
+        <Text fontSize="xl" mb={20}>
+          {title}
+        </Text>
+        <AvailableDates
+          frequency={frequency}
+          duration={duration}
+          onChange={handleChange}
+          selected={{ date: selectedDate, time: selectedTime }}
+          isOnModal
+        />
+      </Div>
+      <Button w="100%" py={15} bg="black" fontSize="lg" rounded={10} onPress={handlePayment}>
+        Continue with payment
+      </Button>
+      <Snackbar
+        suffix={<Icon name="alert" color="white" fontSize="md" fontFamily="Foundation" />}
+        ref={snackbarRef}
+        bg="red"
+        color="white"
+        duration={2000}
+        position="absolute"
+        bottom={30}
+        fontSize="xl"
+      >
+        Date and time slots are not selected
+      </Snackbar>
+    </>
+  )
 
   return (
     <Container disableSafeArea>
@@ -130,36 +149,6 @@ export function ActivityScreen({ route, navigation }: any) {
           {selectedTime ? 'Review Dates' : 'Show Dates'}
         </Button>
       </Div>
-      <Modal title="Confirm your booking" isVisible={isVisible} onClose={() => setVisible(false)}>
-        <Div>
-          <Text fontSize="md">Event Info:</Text>
-          <Text fontSize="xl" mb={20}>
-            {title}
-          </Text>
-          <AvailableDates
-            frequency={frequency}
-            duration={duration}
-            onChange={handleChange}
-            selected={{ date: selectedDate, time: selectedTime }}
-            isOnModal
-          />
-        </Div>
-        <Button w="100%" py={15} bg="black" fontSize="lg" rounded={10} onPress={handlePayment}>
-          Continue with payment
-        </Button>
-        <Snackbar
-          suffix={<Icon name="alert" color="white" fontSize="md" fontFamily="Foundation" />}
-          ref={snackbarRef}
-          bg="red"
-          color="white"
-          duration={2000}
-          position="absolute"
-          bottom={30}
-          fontSize="xl"
-        >
-          Date and time slots are not selected
-        </Snackbar>
-      </Modal>
     </Container>
   )
 }

@@ -12,25 +12,11 @@ const Item = (item: any) => {
   const navigation = useNavigation()
 
   const handleDetailsPress = () => {
-    // Navigation.push('Activities', {
-    //   component: {
-    //     name: 'Activity',
-    //     passProps: { item },
-    //     options: {
-    //       topBar: {
-    //         visible: false,
-    //       },
-    //       bottomTabs: {
-    //         visible: false,
-    //       },
-    //     },
-    //   },
-    // })
     navigation.navigate('Activity', { item })
   }
 
   const handleUserPress = () => {
-    // navigation.push('ArtistProfile', { item })
+    navigation.navigate('ArtistProfile', { item })
   }
 
   const { width } = Dimensions.get('window')
