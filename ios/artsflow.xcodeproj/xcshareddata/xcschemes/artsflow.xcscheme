@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "artsflow.app"
-               BlueprintName = "artsflow"
-               ReferencedContainer = "container:artsflow.xcodeproj">
+               BuildableName = "Artsflow.app"
+               BlueprintName = "Artsflow"
+               ReferencedContainer = "container:Artsflow.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "artsflowTests.xctest"
-               BlueprintName = "artsflowTests"
-               ReferencedContainer = "container:artsflow.xcodeproj">
+               BuildableName = "ArtsflowTests.xctest"
+               BlueprintName = "ArtsflowTests"
+               ReferencedContainer = "container:Artsflow.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "artsflow.app"
-            BlueprintName = "artsflow"
-            ReferencedContainer = "container:artsflow.xcodeproj">
+            BuildableName = "Artsflow.app"
+            BlueprintName = "Artsflow"
+            ReferencedContainer = "container:Artsflow.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "artsflow.app"
-            BlueprintName = "artsflow"
-            ReferencedContainer = "container:artsflow.xcodeproj">
+            BuildableName = "Artsflow.app"
+            BlueprintName = "Artsflow"
+            ReferencedContainer = "container:Artsflow.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

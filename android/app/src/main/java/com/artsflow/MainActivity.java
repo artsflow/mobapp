@@ -6,6 +6,6 @@ public class MainActivity extends ReactActivity {
 
   @Override	
   protected String getMainComponentName() {	
-    return "artsflow";	
+    return "Artsflow";	
   }
 }

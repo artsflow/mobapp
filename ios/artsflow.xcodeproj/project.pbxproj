@@ -6,14 +6,14 @@
 	objectVersion = 46;
 	objects = {
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* artsflowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* artsflowTests.m */; };
+		00E356F31AD99517003FC87E /* ArtsflowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ArtsflowTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		20D9849C25540DFE0043C32E /* AppCenter-Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 20D9849B25540DFE0043C32E /* AppCenter-Config.plist */; };
-		3FF9573AA6DDE25CCB55AEEC /* libPods-artsflow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E04D846CBB5C4E2DFFF535A /* libPods-artsflow.a */; };
+		3FF9573AA6DDE25CCB55AEEC /* libPods-Artsflow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E04D846CBB5C4E2DFFF535A /* libPods-Artsflow.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		F0838FEA2D4146058DA323EE /* libPods-artsflow-artsflowTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD69EC13905B4E533A767CF9 /* libPods-artsflow-artsflowTests.a */; };
+		F0838FEA2D4146058DA323EE /* libPods-Artsflow-ArtsflowTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD69EC13905B4E533A767CF9 /* libPods-Artsflow-ArtsflowTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,37 +22,37 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = artsflow;
+			remoteInfo = Artsflow;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* artsflowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = artsflowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* ArtsflowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtsflowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* artsflowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = artsflowTests.m; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* artsflow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = artsflow.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = artsflow/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = artsflow/AppDelegate.m; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = artsflow/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = artsflow/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = artsflow/main.m; sourceTree = "<group>"; };
-		1A0E335B2FB02567A94F8252 /* libPods-artsflow-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-artsflow-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356F21AD99517003FC87E /* ArtsflowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtsflowTests.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* Artsflow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artsflow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Artsflow/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Artsflow/AppDelegate.m; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Artsflow/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Artsflow/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Artsflow/main.m; sourceTree = "<group>"; };
+		1A0E335B2FB02567A94F8252 /* libPods-Artsflow-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Artsflow-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20D9849B25540DFE0043C32E /* AppCenter-Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AppCenter-Config.plist"; sourceTree = "<group>"; };
-		2D7212AEFB4CB01764157B0B /* Pods-artsflow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-artsflow.debug.xcconfig"; path = "Target Support Files/Pods-artsflow/Pods-artsflow.debug.xcconfig"; sourceTree = "<group>"; };
-		40D7D22ED18DCC5E2CEC1916 /* Pods-artsflow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-artsflow.release.xcconfig"; path = "Target Support Files/Pods-artsflow/Pods-artsflow.release.xcconfig"; sourceTree = "<group>"; };
-		5E04D846CBB5C4E2DFFF535A /* libPods-artsflow.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-artsflow.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		80B1EF7A9B4BBC8A5C386B2B /* Pods-artsflow-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-artsflow-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-artsflow-tvOS/Pods-artsflow-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = artsflow/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		9DCBECB1747AEBD19CD471C1 /* Pods-artsflow-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-artsflow-tvOS.release.xcconfig"; path = "Target Support Files/Pods-artsflow-tvOS/Pods-artsflow-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		AF83C0E6A26FD58B341FB2CB /* Pods-artsflow-artsflowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-artsflow-artsflowTests.release.xcconfig"; path = "Target Support Files/Pods-artsflow-artsflowTests/Pods-artsflow-artsflowTests.release.xcconfig"; sourceTree = "<group>"; };
-		CB8DFC0BE4DEC11B8C5EE0EF /* Pods-artsflow-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-artsflow-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-artsflow-tvOSTests/Pods-artsflow-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		D4EB2AD7E97D7D3923F996EE /* Pods-artsflow-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-artsflow-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-artsflow-tvOSTests/Pods-artsflow-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		DC6E763289F1279430AA8F58 /* libPods-artsflow-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-artsflow-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E06FB399D29E5C9525CD78DA /* Pods-artsflow-artsflowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-artsflow-artsflowTests.debug.xcconfig"; path = "Target Support Files/Pods-artsflow-artsflowTests/Pods-artsflow-artsflowTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2D7212AEFB4CB01764157B0B /* Pods-Artsflow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artsflow.debug.xcconfig"; path = "Target Support Files/Pods-Artsflow/Pods-Artsflow.debug.xcconfig"; sourceTree = "<group>"; };
+		40D7D22ED18DCC5E2CEC1916 /* Pods-Artsflow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artsflow.release.xcconfig"; path = "Target Support Files/Pods-Artsflow/Pods-Artsflow.release.xcconfig"; sourceTree = "<group>"; };
+		5E04D846CBB5C4E2DFFF535A /* libPods-Artsflow.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Artsflow.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		80B1EF7A9B4BBC8A5C386B2B /* Pods-Artsflow-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artsflow-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-Artsflow-tvOS/Pods-Artsflow-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Artsflow/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9DCBECB1747AEBD19CD471C1 /* Pods-Artsflow-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artsflow-tvOS.release.xcconfig"; path = "Target Support Files/Pods-Artsflow-tvOS/Pods-Artsflow-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		AF83C0E6A26FD58B341FB2CB /* Pods-Artsflow-ArtsflowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artsflow-ArtsflowTests.release.xcconfig"; path = "Target Support Files/Pods-Artsflow-ArtsflowTests/Pods-Artsflow-ArtsflowTests.release.xcconfig"; sourceTree = "<group>"; };
+		CB8DFC0BE4DEC11B8C5EE0EF /* Pods-Artsflow-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artsflow-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-Artsflow-tvOSTests/Pods-Artsflow-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		D4EB2AD7E97D7D3923F996EE /* Pods-Artsflow-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artsflow-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Artsflow-tvOSTests/Pods-Artsflow-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DC6E763289F1279430AA8F58 /* libPods-Artsflow-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Artsflow-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E06FB399D29E5C9525CD78DA /* Pods-Artsflow-ArtsflowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artsflow-ArtsflowTests.debug.xcconfig"; path = "Target Support Files/Pods-Artsflow-ArtsflowTests/Pods-Artsflow-ArtsflowTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		FD69EC13905B4E533A767CF9 /* libPods-artsflow-artsflowTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-artsflow-artsflowTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD69EC13905B4E533A767CF9 /* libPods-Artsflow-ArtsflowTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Artsflow-ArtsflowTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0838FEA2D4146058DA323EE /* libPods-artsflow-artsflowTests.a in Frameworks */,
+				F0838FEA2D4146058DA323EE /* libPods-Artsflow-ArtsflowTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,20 +68,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FF9573AA6DDE25CCB55AEEC /* libPods-artsflow.a in Frameworks */,
+				3FF9573AA6DDE25CCB55AEEC /* libPods-Artsflow.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* artsflowTests */ = {
+		00E356EF1AD99517003FC87E /* ArtsflowTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* artsflowTests.m */,
+				00E356F21AD99517003FC87E /* ArtsflowTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = artsflowTests;
+			path = ArtsflowTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -92,7 +92,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* artsflow */ = {
+		13B07FAE1A68108700A75B9A /* Artsflow */ = {
 			isa = PBXGroup;
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -103,7 +103,7 @@
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = artsflow;
+			name = Artsflow;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -111,10 +111,10 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				5E04D846CBB5C4E2DFFF535A /* libPods-artsflow.a */,
-				FD69EC13905B4E533A767CF9 /* libPods-artsflow-artsflowTests.a */,
-				1A0E335B2FB02567A94F8252 /* libPods-artsflow-tvOS.a */,
-				DC6E763289F1279430AA8F58 /* libPods-artsflow-tvOSTests.a */,
+				5E04D846CBB5C4E2DFFF535A /* libPods-Artsflow.a */,
+				FD69EC13905B4E533A767CF9 /* libPods-Artsflow-ArtsflowTests.a */,
+				1A0E335B2FB02567A94F8252 /* libPods-Artsflow-tvOS.a */,
+				DC6E763289F1279430AA8F58 /* libPods-Artsflow-tvOSTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -122,14 +122,14 @@
 		3067F910A9796AFAB9B9B684 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2D7212AEFB4CB01764157B0B /* Pods-artsflow.debug.xcconfig */,
-				40D7D22ED18DCC5E2CEC1916 /* Pods-artsflow.release.xcconfig */,
-				E06FB399D29E5C9525CD78DA /* Pods-artsflow-artsflowTests.debug.xcconfig */,
-				AF83C0E6A26FD58B341FB2CB /* Pods-artsflow-artsflowTests.release.xcconfig */,
-				80B1EF7A9B4BBC8A5C386B2B /* Pods-artsflow-tvOS.debug.xcconfig */,
-				9DCBECB1747AEBD19CD471C1 /* Pods-artsflow-tvOS.release.xcconfig */,
-				D4EB2AD7E97D7D3923F996EE /* Pods-artsflow-tvOSTests.debug.xcconfig */,
-				CB8DFC0BE4DEC11B8C5EE0EF /* Pods-artsflow-tvOSTests.release.xcconfig */,
+				2D7212AEFB4CB01764157B0B /* Pods-Artsflow.debug.xcconfig */,
+				40D7D22ED18DCC5E2CEC1916 /* Pods-Artsflow.release.xcconfig */,
+				E06FB399D29E5C9525CD78DA /* Pods-Artsflow-ArtsflowTests.debug.xcconfig */,
+				AF83C0E6A26FD58B341FB2CB /* Pods-Artsflow-ArtsflowTests.release.xcconfig */,
+				80B1EF7A9B4BBC8A5C386B2B /* Pods-Artsflow-tvOS.debug.xcconfig */,
+				9DCBECB1747AEBD19CD471C1 /* Pods-Artsflow-tvOS.release.xcconfig */,
+				D4EB2AD7E97D7D3923F996EE /* Pods-Artsflow-tvOSTests.debug.xcconfig */,
+				CB8DFC0BE4DEC11B8C5EE0EF /* Pods-Artsflow-tvOSTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -145,9 +145,9 @@
 			isa = PBXGroup;
 			children = (
 				20D9849B25540DFE0043C32E /* AppCenter-Config.plist */,
-				13B07FAE1A68108700A75B9A /* artsflow */,
+				13B07FAE1A68108700A75B9A /* Artsflow */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* artsflowTests */,
+				00E356EF1AD99517003FC87E /* ArtsflowTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				3067F910A9796AFAB9B9B684 /* Pods */,
@@ -161,8 +161,8 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* artsflow.app */,
-				00E356EE1AD99517003FC87E /* artsflowTests.xctest */,
+				13B07F961A680F5B00A75B9A /* Artsflow.app */,
+				00E356EE1AD99517003FC87E /* ArtsflowTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -177,9 +177,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* artsflowTests */ = {
+		00E356ED1AD99517003FC87E /* ArtsflowTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "artsflowTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ArtsflowTests" */;
 			buildPhases = (
 				996D8DCABE3912854162D815 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -192,14 +192,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = artsflowTests;
-			productName = artsflowTests;
-			productReference = 00E356EE1AD99517003FC87E /* artsflowTests.xctest */;
+			name = ArtsflowTests;
+			productName = ArtsflowTests;
+			productReference = 00E356EE1AD99517003FC87E /* ArtsflowTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* artsflow */ = {
+		13B07F861A680F5B00A75B9A /* Artsflow */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "artsflow" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Artsflow" */;
 			buildPhases = (
 				8D61E2FABB2DDC01B0EF8342 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -213,9 +213,9 @@
 			);
 			dependencies = (
 			);
-			name = artsflow;
-			productName = artsflow;
-			productReference = 13B07F961A680F5B00A75B9A /* artsflow.app */;
+			name = Artsflow;
+			productName = Artsflow;
+			productReference = 13B07F961A680F5B00A75B9A /* Artsflow.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -238,7 +238,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "artsflow" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Artsflow" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -251,8 +251,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* artsflow */,
-				00E356ED1AD99517003FC87E /* artsflowTests */,
+				13B07F861A680F5B00A75B9A /* Artsflow */,
+				00E356ED1AD99517003FC87E /* ArtsflowTests */,
 			);
 		};
 /* End PBXProject section */
@@ -298,7 +298,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-artsflow-artsflowTests/Pods-artsflow-artsflowTests-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Artsflow-ArtsflowTests/Pods-Artsflow-ArtsflowTests-resources.sh",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
@@ -339,7 +339,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-artsflow-artsflowTests/Pods-artsflow-artsflowTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Artsflow-ArtsflowTests/Pods-Artsflow-ArtsflowTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		888F5F5E7C7EBBB490BA9E04 /* [CP] Copy Pods Resources */ = {
@@ -348,7 +348,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-artsflow/Pods-artsflow-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Artsflow/Pods-Artsflow-resources.sh",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
@@ -389,7 +389,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-artsflow/Pods-artsflow-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Artsflow/Pods-Artsflow-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8D61E2FABB2DDC01B0EF8342 /* [CP] Check Pods Manifest.lock */ = {
@@ -407,7 +407,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-artsflow-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Artsflow-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -429,7 +429,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-artsflow-artsflowTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Artsflow-ArtsflowTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -462,7 +462,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* artsflowTests.m in Sources */,
+				00E356F31AD99517003FC87E /* ArtsflowTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,7 +480,7 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* artsflow */;
+			target = 13B07F861A680F5B00A75B9A /* Artsflow */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -488,7 +488,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E06FB399D29E5C9525CD78DA /* Pods-artsflow-artsflowTests.debug.xcconfig */;
+			baseConfigurationReference = E06FB399D29E5C9525CD78DA /* Pods-Artsflow-ArtsflowTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -499,7 +499,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = artsflowTests/Info.plist;
+				INFOPLIST_FILE = ArtsflowTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -511,13 +511,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/artsflow.app/artsflow";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Artsflow.app/Artsflow";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AF83C0E6A26FD58B341FB2CB /* Pods-artsflow-artsflowTests.release.xcconfig */;
+			baseConfigurationReference = AF83C0E6A26FD58B341FB2CB /* Pods-Artsflow-ArtsflowTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -525,7 +525,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = artsflowTests/Info.plist;
+				INFOPLIST_FILE = ArtsflowTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -537,13 +537,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/artsflow.app/artsflow";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Artsflow.app/Artsflow";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D7212AEFB4CB01764157B0B /* Pods-artsflow.debug.xcconfig */;
+			baseConfigurationReference = 2D7212AEFB4CB01764157B0B /* Pods-Artsflow.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -552,7 +552,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JQ9URB9UZ7;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = artsflow/Info.plist;
+				INFOPLIST_FILE = Artsflow/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -560,8 +560,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.artsflow.app;
-				PRODUCT_NAME = artsflow;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Artsflow.app;
+				PRODUCT_NAME = Artsflow;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -571,7 +571,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 40D7D22ED18DCC5E2CEC1916 /* Pods-artsflow.release.xcconfig */;
+			baseConfigurationReference = 40D7D22ED18DCC5E2CEC1916 /* Pods-Artsflow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -579,7 +579,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JQ9URB9UZ7;
-				INFOPLIST_FILE = artsflow/Info.plist;
+				INFOPLIST_FILE = Artsflow/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -587,8 +587,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.artsflow.app;
-				PRODUCT_NAME = artsflow;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Artsflow.app;
+				PRODUCT_NAME = Artsflow;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -711,7 +711,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "artsflowTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ArtsflowTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -720,7 +720,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "artsflow" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Artsflow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -729,7 +729,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "artsflow" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Artsflow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
