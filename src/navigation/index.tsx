@@ -5,7 +5,7 @@ import { enableScreens } from 'react-native-screens'
 import { createNativeStackNavigator } from 'react-native-screens/native-stack'
 
 import { TabNavigator } from './Tabs'
-import { ModalScreen } from 'screens'
+import { ConfirmBookingScreen, AuthScreen } from 'screens'
 
 enableScreens()
 const RootStack = createNativeStackNavigator()
@@ -15,7 +15,8 @@ export function Navigator() {
     <NavigationContainer>
       <RootStack.Navigator screenOptions={{ headerShown: false, stackPresentation: 'modal' }}>
         <RootStack.Screen name="Tabs" component={TabNavigator} />
-        <RootStack.Screen name="Modal" component={ModalScreen} />
+        <RootStack.Screen name="ConfirmBooking" component={ConfirmBookingScreen} />
+        <RootStack.Screen name="Auth" component={AuthScreen} />
       </RootStack.Navigator>
     </NavigationContainer>
   )
